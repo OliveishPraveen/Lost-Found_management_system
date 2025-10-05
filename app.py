@@ -45,7 +45,7 @@ elif choice == "2":
                 keyword = input("Enter search keyword: ")
                 results = search_items(keyword)
                 if results:
-                    print("\n🔎 Search Results:")
+                    print("\n Search Results:")
                     for r in results:
                         print(f"ID: {r['item_id']} | Title: {r['title']} | Location: {r['location']} | Status: {r['status']}")
                 else:
@@ -59,9 +59,9 @@ elif choice == "2":
             elif option == "4":
                 claims = get_claims_for_user(current_user_id)
                 if not claims:
-                    print("📭 No claims for your items.")
+                    print(" No claims for your items.")
                 else:
-                    print("\n📋 Claims for your items:")
+                    print("\n Claims for your items:")
                     for c in claims:
                         print(f"Claim ID: {c['claim_id']} | Item: {c['title']} | Claimer: {c['claimant_name']} | Proof: {c['claim_message']} | Status: {c['status']}")
 
@@ -77,8 +77,9 @@ elif choice == "2":
 
 
             elif option == "5":
-                print("👋 Logged out.")
+                print(" Logged out.")
                 break
     else:
         print("❌ Invalid choice.")
+
 
